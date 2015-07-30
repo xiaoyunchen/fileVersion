@@ -14,12 +14,17 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // Configuration to be run (and then tested).
+    /**
+     *  files config
+     *  dest -> the destination of html file
+     *  src  -> the static files (css or javascript) path
+     */
     file_version: {
       js: {
         options: {
         },
         files: {
-          'demo/index.html': ['demo/js/hello.js','demo/js/world.js'],
+          'demo/index.html': ['demo/js/*.js'],
         },
       },
       css: {
@@ -30,7 +35,6 @@ module.exports = function(grunt) {
         },
       },
     }
-
 
   });
 
