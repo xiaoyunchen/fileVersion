@@ -105,8 +105,9 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Thanks
-感谢[韩小麦](https://github.com/jessiehan)同学，我最初是使用你的[asset-cache-control](https://github.com/jessiehan/asset-cache-control)插件
+感谢[韩小麦](https://github.com/jessiehan)同学，我最初是使用你的[asset-cache-control](https://github.com/jessiehan/asset-cache-control)插件<br/>
+部分代码也是借鉴你的插件
 
 
 ## Release History
-_(Nothing yet)_
+`0.1.0`	2015-7-30	发布fileVersion插件
