@@ -1,5 +1,5 @@
 /*
- * grunt-fileVersion
+ * grunt-file-version
  * https://github.com/xiaoyunchen/fileVersion
  *
  * Copyright (c) 2015 陈云
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run (and then tested).
-    fileVersion: {
+    file_version: {
       default_options: {
         options: {
         },
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'fileVersion', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'file_version', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);

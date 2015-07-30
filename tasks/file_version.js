@@ -1,5 +1,5 @@
 /*
- * grunt-fileVersion
+ * grunt-file-version
  * https://github.com/xiaoyunchen/fileVersion
  *
  * Copyright (c) 2015 陈云
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('fileVersion', 'add the file version to js & css', function() {
+  grunt.registerMultiTask('file_version', 'add file version to js&css in the html', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
       punctuation: '.',
