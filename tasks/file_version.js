@@ -65,12 +65,12 @@ module.exports = function(grunt) {
 				var newdata = data.replace(assetName, newurl);
 
 				if (grunt.file.write(fileSrc, newdata)) {
-					grunt.log.success(fileSrc + ' add ts successfully');
+					grunt.log.success(fileSrc + ' add version successfully');
 				} else {
-					grunt.log.error(fileSrc + ' add ts failed');
+					grunt.log.error(fileSrc + ' add version failed');
 				}
 			} else {
-				grunt.log.error('asset not found in file ' + fileSrc);
+				grunt.log.error(assetUrl+' not found in file ' + fileSrc);
 			}
 
 		}
