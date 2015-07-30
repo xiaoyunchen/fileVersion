@@ -1,7 +1,7 @@
 # background 
-> 前端开发过程中难免要处理js与css的缓存问题，一般需要为引用的js和css静态文件加入版本号，让浏览器可以知道文件是否有变更。<br/>
-> 我们做法是为js/css静态文件产生一个MD5值，作为其对应的版本号，一旦文件有修改，那么对应的版本号也会变化。<br/>
-> 显然这是一个重复性很高（因为js/css经常修改）的工作，所以我们可以用fileVersion来帮助我们自动完成这部分工作。<br/>
+> *前端开发过程中难免要处理js与css的缓存问题，一般需要为引用的js和css静态文件加入版本号，让浏览器可以知道文件是否有变更。<br/>
+> *我们做法是为js/css静态文件产生一个MD5值，作为其对应的版本号，一旦文件有修改，那么对应的版本号也会变化。<br/>
+> *显然这是一个重复性很高（因为js/css经常修改）的工作，所以我们可以用fileVersion来帮助我们自动完成这部分工作。<br/>
 
 # grunt-file-version
 
@@ -108,6 +108,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 感谢[韩小麦](https://github.com/jessiehan)同学，我最初是使用你的[asset-cache-control](https://github.com/jessiehan/asset-cache-control)插件<br/>
 部分代码也是借鉴你的插件
 
+## Next
+下个版本计划：`为静态文件添加cdn host`
 
 ## Release History
 `0.1.0`	2015-7-30	发布fileVersion插件
