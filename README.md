@@ -6,6 +6,7 @@
 # grunt-file-version
 
 > add file version to js&css in the html
+> 为html中引用的js/css添加md5版本号
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -51,7 +52,7 @@ grunt.initConfig({
 ### Options
 > 暂时无需配置，插件采用以下默认配置<br/>
 > 版本号参数名称：`v`<br/>
-> 版本号长度：8<br/>
+> 版本号长度：`8`<br/>
 
 ### Usage Examples
 
@@ -102,6 +103,10 @@ grunt.initConfig({
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Thanks
+感谢[韩小麦](https://github.com/jessiehan)同学，我最初是使用你的[asset-cache-control](https://github.com/jessiehan/asset-cache-control)插件
+
 
 ## Release History
 _(Nothing yet)_
