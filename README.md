@@ -1,7 +1,7 @@
 # background 
-> 前端开发过程中难免要处理js与css的缓存问题，一般需要为引用的js和css静态文件加入版本号，让浏览器可以知道文件是否有变更<br/>
-> 我们做法是为js/css静态文件产生一个MD5值，作为其对应的版本号，一旦文件有修改，那么对应的版本号也会变化<br/>
-> 显然这是一个重复性很高（因为js/css经常修改）的工作，所以我们可以用fileVersion来帮助我们自动完成这些工作<br/>
+> 前端开发过程中难免要处理js与css的缓存问题，一般需要为引用的js和css静态文件加入版本号，让浏览器可以知道文件是否有变更。<br/>
+> 我们做法是为js/css静态文件产生一个MD5值，作为其对应的版本号，一旦文件有修改，那么对应的版本号也会变化。<br/>
+> 显然这是一个重复性很高（因为js/css经常修改）的工作，所以我们可以用fileVersion来帮助我们自动完成这部分工作。<br/>
 
 # grunt-file-version
 
@@ -30,62 +30,75 @@ In your project's Gruntfile, add a section named `file_version` to the data obje
 ```js
 grunt.initConfig({
   file_version: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    js: {
+        options: {
+        },
+        files: {
+          'demo/index.html': ['demo/js/*.js'],
+        },
+      },
+	  css: {
+	    options: {
+	    },
+	    files: {
+	      'demo/index.html': ['demo/css/*.css'],
+	    },
+	  },
   },
 });
 ```
 
 ### Options
-
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+> 暂时无需配置，插件采用以下默认配置<br/>
+> 版本号参数名称：`v`<br/>
+> 版本号长度：8<br/>
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+在本例中，我们将会为`index.html`中引用的js与css添加版本号<br/>
+在配置js和css路径时，只需配置到目录即可
 
 ```js
 grunt.initConfig({
   file_version: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    js: {
+        options: {
+        },
+        files: {
+          'demo/index.html': ['demo/js/*.js'],
+        },
+      },
+	  css: {
+	    options: {
+	    },
+	    files: {
+	      'demo/index.html': ['demo/css/*.css'],
+	    },
+	  },
   },
 });
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
+#### example result
+##### 原始文件内容
 ```js
-grunt.initConfig({
-  file_version: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+	<link rel="stylesheet" href="css/hello.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/world.css"/>
+	
+	<script src="js/hello.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/world.js" type="text/javascript" charset="utf-8"></script>
+```	
+
+##### 插件执行后结果
+```js
+	<link rel="stylesheet" href="css/hello.css?v=e1bcdd3a" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/world.css?v=6ec18d77"/>
+	
+	<script src="js/hello.js?v=10f59858" type="text/javascript" charset="utf-8"></script>
+	<script src="js/world.js?v=0120e944" type="text/javascript" charset="utf-8"></script>
+```	
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
