@@ -1,11 +1,11 @@
-# background 
+# Background 
 > * 前端开发过程中难免要处理js与css的缓存问题，一般需要为引用的js和css静态文件加入版本号，让浏览器可以知道文件是否有变更。<br/>
 > * 我们做法是为js/css静态文件产生一个MD5值，作为其对应的版本号，一旦文件有修改，那么对应的版本号也会变化。<br/>
 > * 显然这是一个重复性很高（因为js/css经常修改）的工作，所以我们可以用fileVersion来帮助我们自动完成这部分工作。<br/>
 
 # grunt-file-version
 
-> add file version to js&css in the html
+> add file version to js&css in the html<br/>
 > 为html中引用的js/css添加md5版本号
 
 ## Getting Started
@@ -51,8 +51,8 @@ grunt.initConfig({
 
 ### Options
 > 暂时无需配置，插件采用以下默认配置<br/>
-> 版本号参数名称：`v`<br/>
-> 版本号长度：`8`<br/>
+> * 版本号参数名称：`v`<br/>
+> * 版本号长度：`8`<br/>
 
 ### Usage Examples
 
@@ -81,7 +81,7 @@ grunt.initConfig({
 });
 ```
 
-#### example result
+#### Example Result
 ##### 原始文件内容
 ```js
 	<link rel="stylesheet" href="css/hello.css" type="text/css" />
