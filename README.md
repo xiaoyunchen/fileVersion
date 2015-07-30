@@ -112,4 +112,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 下个版本计划：`为静态文件添加cdn host`
 
 ## Release History
-`0.1.0`	2015-7-30	发布fileVersion插件
+`0.1.0` &nbsp;&nbsp;	2015-7-30&nbsp;&nbsp;	发布fileVersion插件

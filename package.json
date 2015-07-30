@@ -1,7 +1,7 @@
 {
   "name": "grunt-file-version",
   "description": "add file version to js&css in the html",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/xiaoyunchen/fileVersion",
   "author": {
     "name": "陈云",
