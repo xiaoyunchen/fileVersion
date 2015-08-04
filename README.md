@@ -200,9 +200,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 感谢[韩小麦](https://github.com/jessiehan)同学，我最初是使用你的[asset-cache-control](https://github.com/jessiehan/asset-cache-control)插件<br/>
 部分代码也是借鉴你的插件
 
-## Next
-下个版本计划：`为静态文件添加cdn host`
-
 ## Release History
-`0.2.0` &nbsp;&nbsp;	2015-8-4&nbsp;&nbsp;	新功能：使用静态服务器URL替换JS/CSS路径
+`0.2.0` &nbsp;&nbsp;	2015-8-4&nbsp;&nbsp;	新功能：使用静态服务器URL替换JS/CSS路径<br/>
 `0.1.0` &nbsp;&nbsp;	2015-7-30&nbsp;&nbsp;	发布fileVersion插件
