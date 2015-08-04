@@ -22,9 +22,10 @@ module.exports = function(grunt) {
     file_version: {
       js: {
         options: {
+        	cdnhost:'http://static.youcdnhost.com/'
         },
         files: {
-          'demo/index.html': ['demo/js/*.js'],
+          'demo/index.html': ['demo/js/*.js','demo/js/**/*.js'],
         },
       },
       css: {
